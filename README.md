@@ -2,12 +2,12 @@
 ========================
 
 ■.環境作成  
-　pip3 install flask  
+　pip3 install -U flask  
 　pip3 install -U flask-cors  
-　pip3 install requests  
+　pip3 install -U requests  
   
 ■.ソース  
-以下ソースをRaspbery Piにコピーして使用してください。
+以下ソースをRaspberry Piにコピーして使用してください。
 - [ブラウザアプリ](./templates/radioctrl.html) - ラジコン用UI
 です。   
   radioctrl.html  
@@ -21,8 +21,8 @@
   ※ポート番号は環境に応じて変更してください。  
   
 ■.実行例  
-  python3 radioctrl_webapi.py  
-  python3 radioctrl.py
+　python3 radioctrl_webapi.py  
+　python3 radioctrl.py
 
 　  
 
