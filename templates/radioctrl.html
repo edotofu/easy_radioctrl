@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>RPガジェット調査班</title>
+</head>
+<style type="text/css">
+.bt{width:100%;height:100%;padding:10px;font-size:4vmin;}
+table {height:60vmin;width:90vmin;table-layout:fixed;}
+</style>
+<body>
+
+<div style="text-align:center;">
+<h1>Raspberry Pi ラジコンコントローラー</h1>
+<form>
+<table align="center">
+<tr><td></td><td><button type="button" id="gostrate" class="bt">　前　</button></td><td></td></tr>
+<tr><td><button type="button" id="turnleft" class="bt">　左　</button></td><td></td><td><button type="button" id="turnright" class="bt">　右　</button></td></tr>
+<tr><td></td><td><button type="button" id="back" class="bt">　後（将来）</button></td><td></td></tr>
+<tr><td></td><td><button type="button" id="stop" class="bt">停　止</button></td><td></td></tr>
+</table>
+<br><br><br>
+<div font-size:10vmin>@edotofu</div>
+</div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+<script>
+window.onload = function() {
+    //サーバIPを指定
+    const strurl = "http://192.168.3.8:5000/";
+
+   /*************************************
+    * 前
+    *************************************/
+    document.querySelector("#gostrate").addEventListener("click", () => {
+        jQuery.ajax({
+            url: strurl+"gostrate",
+            type: 'PUT',            
+            headers: {
+            //将来利用
+            },
+            cache: false,
+            processData: false
+        })
+        .done(function(textStatus, jqXHR){
+            //TODO:必要時処理
+        })
+        .fail(function(jqXHR, textStatus, errorThrown){
+            //TODO:エラー処理
+        });
+        return false;
+    });
+   /*************************************
+    * 左
+    *************************************/
+    document.querySelector("#turnleft").addEventListener("click", () => {
+        jQuery.ajax({
+            url: strurl+"turnleft",
+            type: 'PUT',            
+            headers: {
+            //将来利用
+            },
+            cache: false,
+            processData: false
+        })
+        .done(function(textStatus, jqXHR){
+            //TODO:必要時処理
+        })
+        .fail(function(jqXHR, textStatus, errorThrown){
+            //TODO:エラー処理
+        });
+        return false;
+    });
+   /*************************************
+    * 右
+    *************************************/
+    document.querySelector("#turnright").addEventListener("click", () => {
+        jQuery.ajax({
+            url: strurl+"turnright",
+            type: 'PUT',            
+            headers: {
+            //将来利用
+            },
+            cache: false,
+            processData: false
+        })
+        .done(function(textStatus, jqXHR){
+            //TODO:必要時処理
+        })
+        .fail(function(jqXHR, textStatus, errorThrown){
+            //TODO:エラー処理
+        });
+        return false;
+    });
+   /*************************************
+    * 停止
+    *************************************/
+    document.querySelector("#stop").addEventListener("click", () => {
+        jQuery.ajax({
+            url: strurl+"stop",
+            type: 'PUT',            
+            headers: {
+            //将来利用
+            },
+            cache: false,
+            processData: false
+        })
+        .done(function(textStatus, jqXHR){
+            //TODO:必要時処理
+        })
+        .fail(function(jqXHR, textStatus, errorThrown){
+            //TODO:エラー処理
+        });
+        return false;
+    });
+
+
+};
+</script>
+</body>
+</html>
