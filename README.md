@@ -13,7 +13,7 @@
   radioctrl.html  
   ※IPアドレスおよびポート番号は環境に応じて変更してください。  
 - [WebAPI](./radioctrl_webapi.py) - Flask上でWebAPIとして動作します。  
-  adioctrl_webapi.py  
+  radioctrl_webapi.py  
   ※ポート番号は5000になっています。  
  
 - [制御用アプリ](./radioctrl.py) - GPIOを制御します。    
